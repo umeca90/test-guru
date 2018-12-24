@@ -28,7 +28,7 @@ questions = Question.create!([
                                { body: 'Famous French dessert', test_id: food_test1.id }
                              ])
 
-answers = Answet.create!([
+answers = Answer.create!([
                            { body: 'Luka Modric', correct: true, question_id: questions[0].id },
                            { body: 'Leo Messi', correct: false, question_id: questions[0].id },
                            { body: 'Shepherds', correct: true, question_id: questions[1].id },
@@ -42,6 +42,6 @@ answers = Answet.create!([
                          ])
 
 results = Result.create!([
-                           { user: user, test: sport_test1 },
-                           { user: user, test: food_test1 }
+                           { user_id: user.id, test_id: sport_test1.id },
+                           { user_id: user.id, test_id: food_test1.id }
                          ])
