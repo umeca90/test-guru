@@ -10,15 +10,17 @@
 
 user = User.create!(name: 'Ben')
 
-cars = Category.create!(title: 'Cars')
-sport = Category.create!(title: 'Sport')
-food = Category.create!(title: 'Food')
+category = Category.create!([
+                              { title: 'Cars' },
+                              { title: 'Sport' },
+                              { title: 'Food' }
+                            ])
 
-sport_test1 = Test.create!(title: 'Famous athlets', level: 2, category_id: sport.id)
-sport_test2 = Test.create!(title: 'Sport history', level: 1, category_id: sport.id)
-cars_test1 = Test.create!(title: 'Cars history', level: 1, category_id: cars.id)
-cars_test2 = Test.create!(title: "Car's Inner Mechanics", level: 0, category_id: cars.id)
-food_test1 = Test.create!(title: 'Weird food', level: 2, category_id: food.id)
+sport_test1 = Test.create!(title: 'Famous athlets', level: 2, category_id: category[1].id)
+sport_test2 = Test.create!(title: 'Sport history', level: 1, category_id: category[1].id)
+cars_test1 = Test.create!(title: 'Cars history', level: 1, category_id: category[0].id)
+cars_test2 = Test.create!(title: "Car's Inner Mechanics", level: 0, category_id: category[0].id)
+food_test1 = Test.create!(title: 'Weird food', level: 2, category_id: category[2].id)
 
 questions = Question.create!([
                                { body: 'Best FIFA 2018 player', test_id: sport_test1.id },
