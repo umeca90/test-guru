@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Answer < ApplicationRecord
-  belongs_to :question
+  belongs_to :question, counter_cache: true
   scope :correct_answer, -> { where(correct: true) }
 
   validates :body, presence: true, length: { maximum: 50 }
@@ -10,6 +10,6 @@ class Answer < ApplicationRecord
   private
 
   def validate_max_answers
-    errors.add(:question, 'max 4 answers') if question.answers.count > 4
+    errors.add(:question, 'max 4 answers') if question.answers.size >= 4
   end
 end

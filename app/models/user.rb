@@ -12,10 +12,6 @@ class User < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
 
-  def tests_by_level(level)
-    # Test.joins("INNER JOIN results ON results.test_id = tests.id AND results.user_id = #{self.id}").where(level: level)
-    tests.where(level: level)
-  end
 
   private
 
