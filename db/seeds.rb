@@ -8,7 +8,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create!(name: 'Ben')
+user = User.create!([
+                    { name: 'Ben' },
+                    { name: 'Alex' },
+                    { name: 'Fred' }
+                    ])
 
 category = Category.create!([
                               { title: 'Cars' },
@@ -16,11 +20,11 @@ category = Category.create!([
                               { title: 'Food' }
                             ])
 
-sport_test1 = Test.create!(title: 'Famous athlets', level: 2, category_id: category[1].id)
-sport_test2 = Test.create!(title: 'Sport history', level: 1, category_id: category[1].id)
-cars_test1 = Test.create!(title: 'Cars history', level: 1, category_id: category[0].id)
-cars_test2 = Test.create!(title: "Car's Inner Mechanics", level: 0, category_id: category[0].id)
-food_test1 = Test.create!(title: 'Weird food', level: 2, category_id: category[2].id)
+sport_test1 = Test.create!(title: 'Famous athlets', level: 2, category_id: category[1].id, author_id: user[0].id)
+sport_test2 = Test.create!(title: 'Sport history', level: 1, category_id: category[1].id, author_id: user[0].id)
+cars_test1 = Test.create!(title: 'Cars history', level: 1, category_id: category[0].id, author_id: user[0].id)
+cars_test2 = Test.create!(title: "Car's Inner Mechanics", level: 0, category_id: category[0].id, author_id: user[0].id)
+food_test1 = Test.create!(title: 'Weird food', level: 2, category_id: category[2].id, author_id: user[0].id)
 
 questions = Question.create!([
                                { body: 'Best FIFA 2018 player', test_id: sport_test1.id },
@@ -43,7 +47,8 @@ answers = Answer.create!([
                            { body: 'Pancakes', correct: true, question_id: questions[4].id }
                          ])
 
-results = Result.create!([
-                           { user_id: user.id, test_id: sport_test1.id },
-                           { user_id: user.id, test_id: food_test1.id }
+results = CoursePassage.create!([
+                           { user_id: user[0].id, test_id: sport_test1.id },
+                           { user_id: user[1].id, test_id: food_test1.id },
+                           { user_id: user[2].id, test_id: food_test1.id }
                          ])
