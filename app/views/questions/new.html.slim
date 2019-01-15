@@ -1,0 +1,6 @@
+= form_for @question, url: test_questions_path, method: 'post' do |f|
+  .field
+    == f.label :body
+    == f.text_field :body
+  .actions
+    == f.submit 'Save'
