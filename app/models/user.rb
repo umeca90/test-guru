@@ -12,6 +12,9 @@ class User < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
 
+  def tests_by_level(level)
+    tests.by_level(level)
+  end
 
   private
 
