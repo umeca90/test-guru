@@ -1,4 +1,4 @@
-= form_for @question, url: test_questions_path(params[:test_id]), method: 'post' do |f|
+= form_with model: [@test, @question] do |f|
   .field
     == f.label :body
     == f.text_field :body

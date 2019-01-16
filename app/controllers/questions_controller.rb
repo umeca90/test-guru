@@ -12,13 +12,13 @@ class QuestionsController < ApplicationController
   end
 
   def new
-    @question = @test.questions.new
+    @question = Question.new
   end
 
   def show; end
 
   def create
-    @question = @test.questions.new(question_params)
+    @question = @test.questions.create(question_params)
     if @question.save
       redirect_to test_questions_path
     else
@@ -42,7 +42,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:body)
+    params.require(:question).permit(:body, :test_id)
   end
 
   def rescue_with_question_not_found
