@@ -1,0 +1,6 @@
+= form_with model: [@test, @question] do |f|
+  .field
+    == f.label :body
+    == f.text_field :body
+  .actions
+    == f.submit 'Save'
