@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TestsController < ApplicationController
   before_action :find_test, only: %i[show edit update destroy]
 
@@ -22,8 +24,7 @@ class TestsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @test.update(test_params)
@@ -51,5 +52,4 @@ class TestsController < ApplicationController
   def rescue_with_test_not_found
     render plain: 'Test was not found'
   end
-
 end

@@ -1,5 +1,6 @@
-module ApplicationHelper
+# frozen_string_literal: true
 
+module ApplicationHelper
   def full_title(page_title = '')
     base_title = 'TestGuru'
     if page_title.empty?
@@ -16,5 +17,4 @@ module ApplicationHelper
   def github_url(author, repo)
     "http://github.com/#{author}/#{repo}"
   end
-
 end
