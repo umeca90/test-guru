@@ -1,3 +1,13 @@
-= @question.body
-= link_to 'delete', question_path(@question), method: :delete, data: { confirm: 'Are you sure?' }
+- provide(:title, 'Show question')
+h1
+  'Questions id:
+  = @question.id
+p
+  'Body:
+  = @question.body
 
+  = link_to 'Back', test_path(@question.test)
+  br/
+  = link_to 'Edit', edit_question_path(@question)
+  br/
+  = link_to 'Delete', question_path(@question), method: :delete, data: { confirm: 'Are you sure?' }
