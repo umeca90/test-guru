@@ -5,7 +5,7 @@ class TestPassage < ApplicationRecord
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
-    before_validation :before_validation_set_question
+  before_validation :before_validation_set_question
 
   def completed?
     current_question.nil?
@@ -18,7 +18,7 @@ class TestPassage < ApplicationRecord
   end
 
   def result
-    (100.to_f/test.questions.size) * correct_questions
+    (100.to_f / test.questions.size) * correct_questions
   end
 
   def passed?
@@ -27,7 +27,7 @@ class TestPassage < ApplicationRecord
 
   def question_number
     test.questions.size - test.questions
-                              .order(:id)
+                          .order(:id)
                               .where('id > ?', current_question.id).size
   end
 
@@ -41,7 +41,6 @@ class TestPassage < ApplicationRecord
                                   .where('id > ?', current_question.id).first
     end
   end
-
 
   def correct_answer?(answer_ids)
     correct_answers.ids.sort == answer_ids.map(&:to_i).sort
