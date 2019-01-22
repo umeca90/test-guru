@@ -2,12 +2,22 @@
 h1
   'Questions id:
   = @question.id
+br/
 p
   'Body:
   = @question.body
+br/
+= link_to 'New answer', new_question_answer_path(@question)
 
-  = link_to 'Back', test_path(@question.test)
-  br/
-  = link_to 'Edit', edit_question_path(@question)
-  br/
-  = link_to 'Delete', question_path(@question), method: :delete, data: { confirm: 'Are you sure?' }
+table
+  tr
+    th Answers
+    th colspan='3' Actions
+    = render @question.answers
+
+
+= link_to 'Back', test_path(@question.test)
+br/
+= link_to 'Edit', edit_question_path(@question)
+br/
+

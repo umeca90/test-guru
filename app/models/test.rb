@@ -3,8 +3,8 @@
 class Test < ApplicationRecord
   belongs_to :category
   has_many :questions, dependent: :destroy
-  has_many :course_passages, dependent: :destroy
-  has_many :users, through: :course_passages
+  has_many :test_passages, dependent: :destroy
+  has_many :users, through: :test_passages
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
 
   scope :easy, -> { by_level(0..1) }
