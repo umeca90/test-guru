@@ -7,7 +7,7 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_question
 
-  def completed?
+  def any_question?
     current_question.nil?
   end
 
@@ -18,32 +18,25 @@ class TestPassage < ApplicationRecord
   end
 
   def result
-    (100.to_f / test.questions.size) * correct_questions
+    (100.00 / test.questions.size) * correct_questions
   end
 
   def passed?
-    result > 84
+    result >= 85
   end
 
   def question_number
-    test.questions.size - test.questions
-                          .order(:id)
-                              .where('id > ?', current_question.id).size
+    test.questions.order(:id).where('id < ?', current_question.id).size + 1
   end
 
   private
 
   def before_validation_set_question
-    if completed? && test.present?
-      self.current_question = test.questions.first
-    else
-      self.current_question = test.questions.order(:id)
-                                  .where('id > ?', current_question.id).first
-    end
+    self.current_question = next_question
   end
 
   def correct_answer?(answer_ids)
-    correct_answers.ids.sort == answer_ids.map(&:to_i).sort
+    correct_answers.ids.sort == Array(answer_ids).map(&:to_i).sort
   end
 
   def correct_answers
@@ -51,6 +44,8 @@ class TestPassage < ApplicationRecord
   end
 
   def next_question
-    test.questions.order(:id).where('id > ?', current_question.id).first
+    any_question? && test.present? ? test.questions.first :
+                                       test.questions.order(:id)
+                                           .where('id > ?', current_question.id).first
   end
 end

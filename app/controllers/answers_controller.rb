@@ -17,7 +17,7 @@ class AnswersController < ApplicationController
 
     if @answer.save
       redirect_to @answer
-    elsif
+    else
       render :new
     end
   end
