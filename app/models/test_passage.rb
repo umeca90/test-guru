@@ -7,7 +7,7 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_question
 
-  def any_question?
+  def completed?
     current_question.nil?
   end
 
@@ -44,8 +44,11 @@ class TestPassage < ApplicationRecord
   end
 
   def next_question
-    any_question? && test.present? ? test.questions.first :
-                                       test.questions.order(:id)
-                                           .where('id > ?', current_question.id).first
+    if self.new_record? && test.present?
+      test.questions.first
+    else
+      test.questions.order(:id).where('id > ?', current_question.id).first
+    end
   end
+
 end
