@@ -37,17 +37,27 @@ questions = Question.create!([
 answers = Answer.create!([
                            { body: 'Luka Modric', correct: true, question_id: questions[0].id },
                            { body: 'Leo Messi', correct: false, question_id: questions[0].id },
+                           { body: 'Ronaldo', correct: false, question_id: questions[0].id },
+                           { body: 'Mikelangelo', correct: false, question_id: questions[0].id },
                            { body: 'Shepherds', correct: true, question_id: questions[1].id },
                            { body: 'Fishman', correct: false, question_id: questions[1].id },
+                           { body: 'Prophet', correct: false, question_id: questions[1].id },
+                           { body: 'Cardinal', correct: false, question_id: questions[1].id },
                            { body: 'Christian Huygens', correct: true, question_id: questions[2].id },
                            { body: 'Haiseberg', correct: false, question_id: questions[2].id },
+                           { body: 'Tomas Edison', correct: false, question_id: questions[2].id },
+                           { body: 'Lomonosov', correct: false, question_id: questions[2].id },
                            { body: 'Accelerator', correct: true, question_id: questions[3].id },
                            { body: 'Brake', correct: false, question_id: questions[3].id },
+                           { body: 'Front window', correct: false, question_id: questions[3].id },
+                           { body: 'Side window', correct: false, question_id: questions[3].id },
                            { body: 'Madeleine', correct: true, question_id: questions[4].id },
+                           { body: 'Croussans', correct: false, question_id: questions[4].id },
+                           { body: 'Burgers', correct: false, question_id: questions[4].id },
                            { body: 'Pancakes', correct: true, question_id: questions[4].id }
                          ])
 
-results = CoursePassage.create!([
+results = TestPassage.create!([
                            { user_id: user[0].id, test_id: sport_test1.id },
                            { user_id: user[1].id, test_id: food_test1.id },
                            { user_id: user[2].id, test_id: food_test1.id }

@@ -1,8 +1,8 @@
 - if resource.errors.present?
   div
     h2
-      = pluralize(resourse.errors.count, 'error ')
+      = pluralize(resource.errors.count, 'error ')
       | detected:
-    - resourse.errors.full_messages.each do |message|
+    - resource.errors.full_messages.each do |message|
       ul
         li = message

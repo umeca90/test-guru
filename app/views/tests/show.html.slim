@@ -1,20 +1,15 @@
 - provide(:title, 'Show test')
-p
+h1
   'Title:
   = @test.title
 p
   'Level:
   = @test.level
-p
-  'Questions
-
 table
   tr
-    th #
-    th Body
-    th Link
-  tbody
-    = render 'test_questions'
+    th Questions
+    th colspan='3' Actions
+    = render @test.questions
 br/
 = link_to 'Create new question', new_test_question_path(@test)
 br/
