@@ -44,11 +44,10 @@ class TestPassage < ApplicationRecord
   end
 
   def next_question
-    if self.new_record? && test.present?
+    if new_record? && test.present?
       test.questions.first
     else
       test.questions.order(:id).where('id > ?', current_question.id).first
     end
   end
-
 end

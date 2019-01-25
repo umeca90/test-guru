@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-
   include SessionsHelper
 
   before_action :authenticate_user!
@@ -17,5 +16,4 @@ class ApplicationController < ActionController::Base
       redirect_to login_path, alert: 'Are u guru?'
     end
   end
-
 end
