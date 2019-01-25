@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     if @user&.authenticate(params[:password])
       log_in(@user)
       # redirect_to tests_path
-      redirect_to cookies.fetch(:path, tests_path)
+      redirect_to cookies.delete(:path) || tests_path
     else
       flash.now[:alert] = 'Invalid data'
       render :new
