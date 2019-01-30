@@ -17,4 +17,10 @@ module ApplicationHelper
   def github_url(author, repo)
     "http://github.com/#{author}/#{repo}"
   end
+
+  private
+
+  def welcome_message
+    "Welcome #{ current_user.email } Guru" if user_signed_in?
+  end
 end
