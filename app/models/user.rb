@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  #  :lockable, :timeoutable,  and :omniauthable
   devise :database_authenticatable,
          :registerable,
          :recoverable,
@@ -23,5 +21,7 @@ class User < ApplicationRecord
     test_passages.order(id: :desc).find_by(test: test)
   end
 
-
+  def admin?
+    is_a?(Admin)
+  end
 end

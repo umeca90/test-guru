@@ -1,8 +1,10 @@
 = question_header(@question)
-= form_with model: [@test, @question] do |f|
+= form_with model: [:admin, @test, @question] do |f|
   = render 'shared/errors', resource: @question
   .field
     = f.label :body
     = f.text_field :body, id: :question_body
   .actions
     = f.submit 'Save'
+
+= link_to 'Back', admin_test_path(@question.test)

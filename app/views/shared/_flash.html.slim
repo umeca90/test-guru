@@ -1,2 +1,2 @@
-- flash.each do |k, m|
-  = content_tag :p, m, class: "flash #{k}"
+- flash.each do |key, message|
+  = content_tag :p, message, class: "flash #{key}"
