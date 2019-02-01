@@ -1,9 +1,9 @@
-  header.navbar.navbar-fixed-top.navbar-inverse
+  header.navbar.navbar-fixed-top
     .container
       = link_to "Test-Guru Project", root_path
       nav
         ul.nav.navbar-nav.navbar-right
-          - if logged_in?
+          - if user_signed_in?
             .nav-user
               = welcome_message
             li.dropdown
@@ -11,8 +11,8 @@
                 | Account
                 b.caret
               ul.dropdown-menu
-                li= link_to "Logout", logout_path, :method => :delete
+                li= link_to "Logout", destroy_user_session_path, method: :delete
                 li.divider
           - else
-            li= link_to "Log in", login_path
-            li= link_to "Register", signup_path
+            li= link_to "Log in", new_user_session_path
+            li= link_to "Register", new_user_registration_path

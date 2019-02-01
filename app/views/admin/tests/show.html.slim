@@ -1,0 +1,17 @@
+- provide(:title, 'Show test')
+h1
+  'Title:
+  = @test.title
+p
+  'Level:
+  = @test.level
+table
+  tr
+    th Questions
+    th colspan='3' Actions
+    = render partial: 'admin/questions/question', collection: @test.questions
+br/
+= link_to 'Create new question', new_admin_test_question_path(@test)
+br/
+= link_to 'Back', admin_tests_path
+
