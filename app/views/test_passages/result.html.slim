@@ -1,4 +1,4 @@
-h1 Test #{@test_passage.test.title} was comleted!
+h1 = t('.header', title: @test_passage.test.title)
 p Your result below:
 - if @test_passage.passed?
     div Well done! Correct answers:
