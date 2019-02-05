@@ -1,16 +1,23 @@
 ru:
-  hello: "Салют мир!"
 
   helpers:
     submit:
       test:
         create: "Создать тест"
         update: "Обновить тест"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
     label:
       test:
         title: "Заголовок"
         level: "Уровень"
         category_id: "Категория"
+    select:
+      prompt: "Выбирите категорию"
 
   shared:
     errors:
@@ -22,17 +29,55 @@ ru:
 
   tests:
     index:
-      header: 'Доступные тесты'
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      actions: "Действия"
+    test:
+      start: "Старт"
+
   test_passages:
     result:
       header: "Тест %{title} пройден!"
 
   admin:
     tests:
-      create:
-        success: 'Тест успешно создан!'
       index:
-        header: 'Все тесты'
+        header: "Все тесты"
+        new: "Новый тест"
+        title: "Тест"
+        level: "Уровень"
+        questions: "Вопросы"
+        actions: "Действия"
+
+      show:
+        title: "Тест %{title}"
+        level: "Уровень %{level}"
+        questions: "Вопросы"
+        new_question: "Новый вопрос"
+        edit: "Редактировать тест"
+        delete: "Удалить тест"
+        actions: "Действия"
+        back: 'Назад'
+
+      create:
+        success: "Test was created successfully!"
+
+      update:
+        success: "Test was updated successfully!"
+
+      delete:
+        success: "Test was detected successfully!"
+
+      test:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+
   tests_mailer:
     completed_test:
       subject: "Вы только что прошли тест!"
+
+  navigation:
+    confirm: "Вы уверены?"
