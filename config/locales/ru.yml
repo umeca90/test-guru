@@ -62,13 +62,13 @@ ru:
         back: 'Назад'
 
       create:
-        success: "Test was created successfully!"
+        success: "Тест успешно создан!"
 
       update:
-        success: "Test was updated successfully!"
+        success: "Тест успешно обновлен!"
 
-      delete:
-        success: "Test was detected successfully!"
+      destroy:
+        success: "Тест успешно удален!"
 
       test:
         show: "Показать"

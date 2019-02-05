@@ -27,7 +27,7 @@ class Admin::TestsController < Admin::BaseController
 
   def update
     if @test.update(test_params)
-      redirect_to admin_test_path(@test)
+      redirect_to admin_test_path(@test), notice: t('.success')
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class Admin::TestsController < Admin::BaseController
 
   def destroy
     @test.destroy
-    redirect_to admin_tests_path
+    redirect_to admin_tests_path, notice: t('.success')
   end
 
   private

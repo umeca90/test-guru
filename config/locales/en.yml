@@ -67,7 +67,7 @@ en:
       update:
         success: "Test was updated successfully!"
 
-      delete:
+      destroy:
         success: "Test was detected successfully!"
 
       test:
