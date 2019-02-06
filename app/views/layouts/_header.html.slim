@@ -1,6 +1,7 @@
   header.navbar.navbar-fixed-top
     .container
-      = link_to "Test-Guru Project", root_path
+      .navbar-brand
+        = link_to "Test-Guru Project", root_path
       nav
         ul.nav.navbar-nav.navbar-right
           - if user_signed_in?
