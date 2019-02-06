@@ -1,0 +1,83 @@
+ru:
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+    label:
+      test:
+        title: "Заголовок"
+        level: "Уровень"
+        category_id: "Категория"
+    select:
+      prompt: "Выбирите категорию"
+
+  shared:
+    errors:
+      header:
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      actions: "Действия"
+    test:
+      start: "Старт"
+
+  test_passages:
+    result:
+      header: "Тест %{title} пройден!"
+
+  admin:
+    tests:
+      index:
+        header: "Все тесты"
+        new: "Новый тест"
+        title: "Тест"
+        level: "Уровень"
+        questions: "Вопросы"
+        actions: "Действия"
+
+      show:
+        title: "Тест %{title}"
+        level: "Уровень %{level}"
+        questions: "Вопросы"
+        new_question: "Новый вопрос"
+        edit: "Редактировать тест"
+        delete: "Удалить тест"
+        actions: "Действия"
+        back: 'Назад'
+
+      create:
+        success: "Тест успешно создан!"
+
+      update:
+        success: "Тест успешно обновлен!"
+
+      destroy:
+        success: "Тест успешно удален!"
+
+      test:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы только что прошли тест!"
+
+  navigation:
+    confirm: "Вы уверены?"
