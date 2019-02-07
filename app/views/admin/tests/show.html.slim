@@ -1,17 +1,18 @@
 - provide(:title, 'Show test')
-h1
-  = t('.title', title: @test.title)
-p
-  = t('.level', level: @test.level)
+.row.justify-content-center.mt-3
+  .col.col-md-4
+    h1
+      = t('.title', title: @test.title)
+    p
+      = t('.level', level: @test.level)
 
-table
-  tr
-    th = t('.questions')
-    th colspan='3'
-      = t('.actions')
-    = render partial: 'admin/questions/question', collection: @test.questions
-br/
-= link_to t('.new_question'), new_admin_test_question_path(@test)
-br/
-= link_to t('.back'), admin_tests_path
+    table.table.table-striped
+      tr
+        th scope="col" = t('.questions')
+        th.text-center colspan="4" scope="col" = t('.actions')
+        = render partial: 'admin/questions/question', collection: @test.questions
+    br/
+    = link_to t('.new_question'), new_admin_test_question_path(@test), class: 'nav-link'
+    br/
+    = link_to t('.back'), admin_tests_path, class: 'nav-link'
 

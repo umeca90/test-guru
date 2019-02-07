@@ -12,8 +12,9 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    = render 'layouts/header'
-    .container
-      = render 'shared/flash'
-      = yield
-    = render 'layouts/footer'
+    = render 'shared/nav'
+    main
+      .container
+        = render 'shared/flash', flash: flash
+        = yield
+      = render 'layouts/footer'
