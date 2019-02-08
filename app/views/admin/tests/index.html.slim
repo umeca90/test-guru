@@ -1,15 +1,17 @@
-  - provide(:title, 'Index')
-  h1 = t('.header')
-  p
-    = link_to t('.new'), new_admin_test_path
+- provide(:title, 'Index')
+.row.justify-content-center.mt-3
+  .col.col-md-4
+    h1 = t('.header')
+p
+  = link_to t('.new'), new_admin_test_path
 
-  table
+table.table.table-striped
+  thead.thead-light
     tr
-      th = t('.title')
-      th = t('.level')
-      th = t('.questions')
-      th colspan="4"
-        = t('.actions')
+      th scope="col" = t('.title')
+      th scope="col" = t('.level')
+      th scope="col" = t('.questions')
+      th.text-center colspan="4" scope="col" = t('.actions')
     tbody
       = render @tests
 
