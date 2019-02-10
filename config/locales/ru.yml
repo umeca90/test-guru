@@ -92,6 +92,7 @@ ru:
 
   navigation:
     confirm: "Вы уверены?"
+    back: "Назад"
 
   services:
     gist:

@@ -93,6 +93,7 @@ en:
 
   navigation:
     confirm: "Are you sure?"
+    back: "Back"
 
   services:
     gist:
