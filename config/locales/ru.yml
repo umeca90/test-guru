@@ -40,8 +40,18 @@ ru:
   test_passages:
     result:
       header: "Тест %{title} пройден!"
+    gist:
+      success: "Гист успешно добавлен!"
+      failure: "Ошибка во время добавления!"
 
   admin:
+    gists:
+      index:
+        header: "Список Gist'ов пользователей"
+        question: "Вопрос"
+        gist_url: "Gist юрл"
+        user: "Пользователь"
+
     tests:
       index:
         header: "Все тесты"
@@ -50,6 +60,7 @@ ru:
         level: "Уровень"
         questions: "Вопросы"
         actions: "Действия"
+        users_gists: "Список Gist'ов пользователей"
 
       show:
         title: "Тест %{title}"
@@ -81,3 +92,7 @@ ru:
 
   navigation:
     confirm: "Вы уверены?"
+
+  services:
+    gist:
+      description: "Вопрос о %{title} из сервиса TestGuru"
