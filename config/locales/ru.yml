@@ -41,8 +41,10 @@ ru:
     result:
       header: "Тест %{title} пройден!"
     gist:
-      success: "Гист успешно добавлен!"
-      failure: "Ошибка во время добавления!"
+      services:
+        gist:
+          success: "Вопрос успешно сохранен : %{link}"
+          failure: "Ошибка во время добавления!"
 
   admin:
     gists:
@@ -97,3 +99,4 @@ ru:
   services:
     gist:
       description: "Вопрос о %{title} из сервиса TestGuru"
+

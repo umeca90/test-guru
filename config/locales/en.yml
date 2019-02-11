@@ -41,8 +41,8 @@ en:
     result:
       header: "Test %{title} completed!"
     gist:
-      success: "Gist was successfully created!"
-      failure: "An error occurred while saving gist!"
+      success: "Question was successfully saved : %{link}"
+      failure: "Error occured while saving Gist"
 
   admin:
     gists:
@@ -98,3 +98,4 @@ en:
   services:
     gist:
       description: "A question about %{title} from TestGuru"
+

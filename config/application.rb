@@ -17,8 +17,5 @@ module TestGuru
     # the framework and any gems in your application.
     I18n.available_locales = [:en, :ru]
     config.i18n.default_locale = :ru
-
-
-
   end
 end
