@@ -41,7 +41,7 @@ en:
     result:
       header: "Test %{title} completed!"
     gist:
-      success: "Question was successfully saved : %{link}"
+      success: "Question was successfully added to Gists, click on to check it."
       failure: "Error occured while saving Gist"
 
   admin:
