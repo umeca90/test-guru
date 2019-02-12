@@ -37,12 +37,24 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'bootstrap-sass', '~> 3.4'
+gem 'autoprefixer-rails', '~> 9.4', '>= 9.4.7'
+gem 'popper_js', '~> 1.14', '>= 1.14.5'
+gem 'sassc-rails', '~> 2.1'
 gem 'sassc', '~> 2.0'
-gem 'jquery-rails',            '4.3.1'
-gem 'bootstrap', '~> 4.1.2'
+
+
+
 
 gem 'devise', '~> 4.0'
+
+
+#UI
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'bootstrap'
+
+gem 'octicons_helper'
+
 
 #Localization
 
@@ -68,6 +80,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'slim'
   gem 'slim-rails'
 end
 

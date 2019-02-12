@@ -1,11 +1,19 @@
-  - provide(:title, "#{t('tests.index.header')}")
-  h1 = t('.header')
+- provide(:title, "#{t('tests.index.header')}")
+h1 = t('.header')
 
-  table
+table.table.table-striped
+  thead.thead-dark
     tr
-      th = t('.title')
-      th = t('.level')
-      th = t('.questions')
+      th scope="col"
+        .sort-by-title.pointer
+          = t('.title')
+          = octicon 'arrow-up', class: 'text-success hide'
+          = octicon 'arrow-down', class: 'text-success hide'
+      th scope="col"
+        = t('.level')
+      th scope="col"
+      = t('.questions')
+      th.text-left colspan="1" scope="col" = t('.actions')
     tbody
       = render @tests
 
