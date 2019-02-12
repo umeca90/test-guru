@@ -8,8 +8,8 @@ p
 p
   'Total questions:
   = @test_passage.test.questions.size
-
-b = @test_passage.current_question.body
+p
+  b = @test_passage.current_question.body
 
 
 = form_with url: test_passage_path(@test_passage), local: true, method: :put do |f|
@@ -18,6 +18,7 @@ b = @test_passage.current_question.body
     = b.check_box id: "answer_ids_#{b.object.id}"
     = b.label
   .action
+  = link_to 'Gist question', gist_test_passage_path(@test_passage), method: :post
   = f.submit 'Next'
 
 = link_to 'Stop test', tests_path

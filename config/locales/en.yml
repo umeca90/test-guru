@@ -40,8 +40,18 @@ en:
   test_passages:
     result:
       header: "Test %{title} completed!"
+    gist:
+      success: "Question was successfully added to Gists, click on to check it."
+      failure: "Error occured while saving Gist"
 
   admin:
+    gists:
+      index:
+        header: "Users gists list"
+        question: "Question"
+        gist_url: "Gist URL"
+        user: "User"
+
     tests:
       index:
         header: "Tricky tests"
@@ -50,6 +60,7 @@ en:
         level: "Level"
         questions: "Questions"
         actions: "Actions"
+        users_gists: "Users Gists list"
 
       show:
         title: "Test %{title}"
@@ -82,3 +93,9 @@ en:
 
   navigation:
     confirm: "Are you sure?"
+    back: "Back"
+
+  services:
+    gist:
+      description: "A question about %{title} from TestGuru"
+
