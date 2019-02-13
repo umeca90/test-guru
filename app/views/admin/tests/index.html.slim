@@ -8,9 +8,15 @@ p
 table.table.table-striped
   thead.thead-light
     tr
-      th scope="col" = t('.title')
-      th scope="col" = t('.level')
-      th scope="col" = t('.questions')
+      th scope="col"
+        .sort-by-title.pointer
+          = t('.title')
+          = octicon 'arrow-up', class: 'text-success hide'
+          = octicon 'arrow-down', class: 'text-success hide'
+      th scope="col"
+        = t('.level')
+      th scope="col"
+      = t('.questions')
       th.text-center colspan="4" scope="col" = t('.actions')
     tbody
       = render @tests
