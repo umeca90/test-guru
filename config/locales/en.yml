@@ -87,6 +87,9 @@ en:
         delete: "Delete"
         new_question: "New question"
 
+      form_inline:
+        submit: "Ok"
+
   tests_mailer:
     completed_test:
       subject: "You've just completed test!"

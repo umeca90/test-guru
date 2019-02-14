@@ -5,6 +5,8 @@
 p
   = link_to t('.new'), new_admin_test_path
 
+= render 'shared/errors', resource: @test
+
 table.table.table-striped
   thead.thead-light
     tr
