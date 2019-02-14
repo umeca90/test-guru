@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-
+  
   root 'tests#index'
 
   devise_for :users, path: :gurus,
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     end
 
   end
-
+  
   namespace :admin do
     resources :gists, only: :index
     resources :tests do
@@ -32,3 +32,4 @@ Rails.application.routes.draw do
   end
 
 end
+
