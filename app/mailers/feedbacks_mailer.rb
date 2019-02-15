@@ -1,10 +1,12 @@
 class FeedbacksMailer < ApplicationMailer
 
+  default to: -> { Admin.pluck(:email) }
+
   def feedback_mail(feedback, user)
     @user = user
     @feedback = feedback
 
-    mail to: 'umeca90@gmail.com', from: @user.email
+    mail from: user.email
   end
 
 end
