@@ -4,7 +4,7 @@ class FeedbacksMailer < ApplicationMailer
     @user = user
     @feedback = feedback
 
-    mail to: 'umeca@gmail.com', from: @user.email
+    mail to: 'umeca90@gmail.com', from: @user.email
   end
 
 end
