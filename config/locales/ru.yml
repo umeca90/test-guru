@@ -98,6 +98,14 @@ ru:
   navigation:
     confirm: "Вы уверены?"
     back: "Назад"
+    feedback: "Оставить отзыв"
+
+  feedbacks:
+    new:
+      new_feedback: "Новый отзыв"
+      back: "Назад"
+    create:
+      feedback: "Отзыв успешно отправлен!"
 
   services:
     gist:

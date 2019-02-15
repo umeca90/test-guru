@@ -53,7 +53,7 @@ gem 'devise', '~> 4.0'
 #UI
 gem 'bootstrap'
 gem 'jquery-rails'
-gem 'bootstrap'
+
 
 gem 'octicons_helper'
 

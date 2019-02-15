@@ -97,6 +97,14 @@ en:
   navigation:
     confirm: "Are you sure?"
     back: "Back"
+    feedback: "Leave a feedback"
+
+  feedbacks:
+    new:
+      new_feedback: "New feedback"
+      back: "Back"
+    create:
+      feedback: "Feedback successfully created!"
 
   services:
     gist:

@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  
+
+  get 'feedbacks/new'
   root 'tests#index'
 
   devise_for :users, path: :gurus,
@@ -12,6 +13,8 @@ Rails.application.routes.draw do
     post :start, on: :member
   end
 
+  resources :feedbacks, only: %i[new create]
+
   resources :test_passages, only: %i[show update] do
     member do
       get :result
@@ -19,7 +22,7 @@ Rails.application.routes.draw do
     end
 
   end
-  
+
   namespace :admin do
     resources :gists, only: :index
     resources :tests do

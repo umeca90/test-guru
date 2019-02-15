@@ -1,0 +1,6 @@
+.row.justify-content-center.mt-3
+  .col.col-md-10
+    h1
+      = t('.new_feedback')
+    = render 'form'
+    = link_to t('.back'), root_path, class: 'nav-link mt-3'
