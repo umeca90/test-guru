@@ -6,8 +6,6 @@ class Feedback
 
   validates :body, presence: true
 
-  def initialize(id = 1)
-    @id = 1
-  end
+
 
 end
