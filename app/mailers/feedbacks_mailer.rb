@@ -6,7 +6,6 @@ class FeedbacksMailer < ApplicationMailer
     @user = user
     @feedback = feedback
 
-    mail from: @user.email, subject: t('.feedback_mail')
+    mail from: @user.email
   end
-
 end
