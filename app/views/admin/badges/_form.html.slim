@@ -1,0 +1,24 @@
+.row.justify-content-center
+  .col.col-md-4
+    = form_with model: [:admin, @badge], local: true do |form|
+      = render 'shared/errors', resource: @badge
+      .form-group
+         = form.label :name
+         = form.text_field :name, class:"form-control"
+      .form-group
+        = form.label :image
+        = form.text_field :image, class:"form-control"
+        .form-text.text-muted
+          = t('.badge_url')
+      .form-group
+        = form.label :award_rule
+        = form.select(:award_rule, Badge::BADGES)
+        .form-text.text-muted
+          = t('.award_rule')
+      .form-group
+        = form.label :badge_param
+        = form.text_field :badge_param
+        .form-text.text-muted
+          = t('.badge_param')
+      .btn.btn-primary
+        = form.submit

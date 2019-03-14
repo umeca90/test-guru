@@ -63,6 +63,7 @@ ru:
         questions: "Вопросы"
         actions: "Действия"
         users_gists: "Список Gist'ов пользователей"
+        badges: "Список баджей"
 
       show:
         title: "Тест %{title}"
@@ -90,6 +91,22 @@ ru:
 
       form_inline:
         submit: "ОК"
+
+    badges:
+      form_inline:
+        submit: "ОК"
+      index:
+        name: "Название"
+        image: "Картинка"
+        award_rule: "Правило для награды"
+        badge_param: "Параметр баджа"
+        actions: "Действия"
+        create: "Новый бадж"
+      badge:
+        edit: "Редактировать"
+        delete: "Удалить"
+        show: "Просмотр"
+
 
   tests_mailer:
     completed_test:

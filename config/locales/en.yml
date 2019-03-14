@@ -61,6 +61,7 @@ en:
         questions: "Questions"
         actions: "Actions"
         users_gists: "Users Gists list"
+        badges: "Badges list"
 
       show:
         title: "Test %{title}"
@@ -89,6 +90,21 @@ en:
 
       form_inline:
         submit: "Ok"
+
+    badges:
+      form_inline:
+        submit: "OK"
+      index:
+        name: "Name"
+        image: "Picture"
+        award_rule: "Reward rule"
+        badge_param: "Parameter"
+        actions: "Actions"
+        create: "New badge"
+      badge:
+        edit: "Edit badge"
+        delete: "Delete badge"
+        show: "See badge"
 
   tests_mailer:
     completed_test:

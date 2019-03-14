@@ -5,4 +5,5 @@ module TestsHelper
     header = test.new_record? ? 'Create new' : 'Edit'
     "#{header} #{test.title} Test"
   end
+
 end

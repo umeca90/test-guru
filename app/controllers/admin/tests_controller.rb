@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Admin::TestsController < Admin::BaseController
-
   before_action :set_tests, only: %i[index update_inline]
   before_action :set_test, only: %i[show edit update destroy start update_inline]
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found

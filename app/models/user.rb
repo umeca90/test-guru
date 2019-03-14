@@ -16,13 +16,12 @@ class User < ApplicationRecord
   has_many :user_badges, dependent: :destroy
   has_many :badges, through: :user_badges
 
-
   def tests_by_level(level)
     tests.by_level(level)
   end
 
   def test_passage(test)
-    test_passages.order(id: :desc).find_by(test: test)
+    test_passages.order(id: :desc).find_by(test: test.id)
   end
 
   def admin?

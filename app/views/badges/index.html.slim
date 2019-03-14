@@ -1,0 +1,13 @@
+.row.justify-content-center.mt-3
+  .col.col-md-8
+    h1 = t('.header')
+    - if @user_badges.present?
+      h2 = t('.earned')
+      table.table
+        = render @user_badges
+    - if @badges.present?
+      h2 = t('.not_earned')
+      table.table
+        = render not_earned_badges
+    - link_to t('navigation.back'), root_path, class: 'nav-link'
+

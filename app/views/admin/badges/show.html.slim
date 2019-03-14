@@ -1,0 +1,21 @@
+.row.justify-content-center.mt-3
+  .col.col-md-4
+    h1= t('.header')
+  table.table.table-striped
+    thead.thead-dark
+      tr
+        th = t('.name')
+        th = t('.image')
+        th = t('.award_rule')
+        th = t('.badge_param')
+    tbody
+    tr
+      td.align-middle = @badge.name
+      td.align-middle = image_tag @badge.image
+      td.align-middle = @badge.award_rule
+      td.align-middle = @badge.badge_param
+  p
+    = link_to t('.edit'), edit_admin_badge_path(@badge), class: 'nav-link'
+  p
+    = link_to t('.delete'), admin_badge_path(@badge), method: :delete, data: { confirm: 'Are you sure?' }
+
