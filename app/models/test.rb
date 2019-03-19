@@ -17,6 +17,7 @@ class Test < ApplicationRecord
                           .order(title: :desc)
                       }
 
+  validates :timer, numericality: { only_integer: true }, allow_blank: true
   validates :title, presence: true, uniqueness: { scope: :level }
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
