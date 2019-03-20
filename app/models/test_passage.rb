@@ -16,8 +16,9 @@ class TestPassage < ApplicationRecord
   end
 
   def accept!(answer_ids)
-    if !test.timer? || remaining_time.positive?
+    if test_unlimited?
       self.correct_questions += 1 if correct_answer?(answer_ids)
+      save_result
       self.current_question = next_question
       save!
     else
@@ -42,10 +43,14 @@ class TestPassage < ApplicationRecord
   end
 
   def remaining_time
-    (self.created_at + test.timer.minutes - Time.current).to_i
+    (created_at + test.timer.minutes - Time.current).to_i
   end
 
   private
+
+  def test_unlimited?
+    !test.timer? || remaining_time.positive?
+  end
 
   def before_validation_set_question
     self.current_question = test.questions.first if test.present?

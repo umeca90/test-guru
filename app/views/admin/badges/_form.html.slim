@@ -12,7 +12,7 @@
           = t('.badge_url')
       .form-group
         = form.label :award_rule
-        = form.select(:award_rule, Badge::BADGES)
+        = form.select(:award_rule, award_rule_name, prompt: true)
         .form-text.text-muted
           = t('.award_rule')
       .form-group

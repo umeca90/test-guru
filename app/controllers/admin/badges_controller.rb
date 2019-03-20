@@ -16,7 +16,7 @@ class Admin::BadgesController < Admin::BaseController
 
   def create
     @badge = Badge.new(badge_params)
-    if @badge.save!
+    if @badge.save
       redirect_to admin_badge_path(@badge), notice: t('.success_new')
     else
       render :new
