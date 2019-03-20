@@ -99,3 +99,36 @@ border-top: 1px solid $gray-medium-light;
 .header {
   display: block;
 }
+
+.guru-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 56px;
+  z-index: 1030;
+  box-shadow:
+    0 0 0 1px;
+}
+
+.guru-header-dark {
+  background-color: #5e4ea2;
+}
+
+.top-bar {
+  display: flex;
+  height: 56px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.top-bar-brand {
+  padding: 0 10px 0 16px;
+  height: 3.5rem;
+  width: 15rem;
+  font-size: 1.25rem;
+  align-items: center;
+  background-color: rgba(20,20,31,.12);
+  border-right: 1px solid #8a8b8e;
+}
+

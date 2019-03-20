@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :tests, only: :index do
     post :start, on: :member
   end
-
+  resources :badges, only: :index
   resources :feedbacks, only: %i[new create]
 
   resources :test_passages, only: %i[show update] do
@@ -25,6 +25,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :gists, only: :index
+    resources :badges do
+      patch :update_inline, on: :member
+    end
     resources :tests do
       patch :update_inline, on: :member
 

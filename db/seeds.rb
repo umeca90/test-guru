@@ -35,7 +35,7 @@ questions = Question.create!([
                                { body: 'Who invented golf', test_id: sport_test2.id },
                                { body: 'Who designed an internal combustion engine', test_id: cars_test1.id },
                                { body: 'The foot pedal that makes the car go faster', test_id: sport_test2.id },
-                               { body: 'French dessert', test_id: sport_test2.id }
+                               { body: 'French dessert', test_id: food_test1.id }
                              ])
 
 
@@ -80,10 +80,4 @@ answers = Answer.create!([
                            { body: 'Croussans', correct: false, question_id: questions[7].id },
                            { body: 'Burgers', correct: false, question_id: questions[7].id },
                            { body: 'Pancakes', correct: true, question_id: questions[7].id }
-                         ])
-
-results = TestPassage.create!([
-                           { user_id: user[0].id, test_id: sport_test1.id },
-                           { user_id: user[1].id, test_id: food_test1.id },
-                           { user_id: user[2].id, test_id: food_test1.id }
                          ])

@@ -1,0 +1,9 @@
+= form_with model: [:admin, badge],
+            url: update_inline_admin_badge_path(badge),
+            local: true,
+            class: 'inline-badge hide',
+            data: { badge_id: badge.id } do |f|
+  .field
+    = f.text_field :name, class: 'form-control mr-2'
+  .actions
+    = f.submit t('.submit'), class: 'btn btn-primary'

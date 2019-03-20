@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Admin::TestsController < Admin::BaseController
-
   before_action :set_tests, only: %i[index update_inline]
   before_action :set_test, only: %i[show edit update destroy start update_inline]
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
@@ -35,7 +34,7 @@ class Admin::TestsController < Admin::BaseController
 
   def update_inline
     if @test.update(test_params)
-      redirect_to admin_tests_path
+      redirect_to admin_tests_path, notice: t('.success')
     else
       render :index
     end
@@ -57,7 +56,7 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id, :author_id)
+    params.require(:test).permit(:title, :level, :category_id, :author_id, :timer)
   end
 
   def rescue_with_test_not_found
