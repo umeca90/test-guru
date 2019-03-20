@@ -105,6 +105,11 @@ en:
         edit: "Edit badge"
         delete: "Delete badge"
         show: "See badge"
+      form:
+        award_rule_name:
+          first_try_complete?: "Test acomplished from 1st try"
+          whole_category_complete?: "Complete all tests from some cathegory"
+          all_by_level?: "Complete all tests with some level"
 
   tests_mailer:
     completed_test:

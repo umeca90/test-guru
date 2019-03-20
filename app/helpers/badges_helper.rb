@@ -4,4 +4,8 @@ module BadgesHelper
     @badges - @user_badges
   end
 
+  def award_rule_name
+    Badge::BADGE_TYPE.map { |rule| [t(rule, scope: 'admin.badges.form.award_rule_name'), rule] }
+  end
+
 end
