@@ -16,4 +16,6 @@ table.table.table-striped
       th.text-left colspan="1" scope="col" = t('.actions')
     tbody
       = render @tests
+p
+  = link_to t('.badges'), badges_path, class: 'nav-link'
 
