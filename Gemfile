@@ -47,7 +47,7 @@ gem 'slim-rails'
 
 
 
-gem 'devise', '~> 4.0'
+gem 'devise', '~> 4.7'
 
 
 #UI
